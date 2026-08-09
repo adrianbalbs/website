@@ -1,0 +1,96 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<header id="site-nav">
+    <nav>
+        <ul>
+            <li id="site-nav-home">
+                <a href="/">
+                    <Icon name="lucide:house" />
+                    Adrian Balbalosa</a
+                >
+            </li>
+            <li class="site-nav-divider" role="separator"></li>
+            <li>
+                <a href="">Blog</a>
+            </li>
+            <li>
+                <a href="">Links</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header {
+        position: sticky;
+        z-index: 999;
+        border-radius: 2.25rem;
+        margin-top: var(--spacing-4);
+        background-color: var(--gray);
+        backdrop-filter: var(--blur);
+        box-shadow: var(--edge-highlight), var(--shadow-glass);
+        padding: var(--spacing-3) var(--spacing-4);
+    }
+
+    #site-nav ul {
+        display: flex;
+        gap: var(--spacing-1);
+        list-style: none;
+        margin: 0;
+        padding-left: 0px;
+        align-items: center;
+    }
+
+    #site-nav a {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-1);
+        border-radius: 2.25rem;
+        color: var(--fg-muted);
+        text-decoration: none;
+        padding: var(--spacing-1) var(--spacing-2);
+        transition:
+            background-color 150ms ease,
+            box-shadow 150ms ease,
+            color 150ms ease;
+    }
+
+    #site-nav li:not(#site-nav-home) a:hover {
+        background-color: var(--gray-accent);
+        box-shadow: var(--edge-highlight), var(--shadow-glass);
+        color: var(--fg);
+    }
+
+    .site-nav-divider {
+        width: 1px;
+        align-self: stretch;
+        margin-inline: var(--spacing-2);
+        background-color: color-mix(in hsl, var(--fg) 14%, transparent);
+    }
+
+    #site-nav-home {
+        border-radius: 2.25rem;
+        background-color: var(--gray-accent);
+        box-shadow: var(--edge-highlight), var(--shadow-glass);
+        padding: var(--spacing-1) var(--spacing-2);
+        transition: background-color 150ms ease;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    #site-nav-home:hover {
+        background-color: var(--accent);
+    }
+
+    #site-nav-home a {
+        color: var(--accent);
+    }
+
+    #site-nav-home:hover a,
+    #site-nav-home a:hover {
+        background-color: transparent;
+        color: black;
+    }
+</style>
