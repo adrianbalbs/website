@@ -3,7 +3,7 @@ import { Font } from "astro:assets";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
 
-const contentWidth = "800px";
+const contentWidth = "700px";
 ---
 
 <!doctype html>
@@ -40,9 +40,8 @@ const contentWidth = "800px";
     }
 
     main {
-        width: var(--contentWidth);
         max-width: var(--contentWidth);
-        margin-block: 68px;
+        margin-block: var(--spacing-7);
     }
 
     footer {
