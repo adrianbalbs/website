@@ -1,4 +1,12 @@
+packages: []
+
+# allowBuilds is pnpm 11+; onlyBuiltDependencies is the pnpm 10 spelling.
+# Both are listed so any pnpm version builds the same packages.
 allowBuilds:
   esbuild: true
   sharp: true
   workerd: false
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
