@@ -8,6 +8,7 @@
 		"directory": "./dist",
 		"binding": "ASSETS"
 	},
+	"routes": [{ "pattern": "abalbalosa.dev", "custom_domain": true }],
 	"observability": {
 		"enabled": true
 	}
