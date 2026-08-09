@@ -94,4 +94,20 @@ import { Icon } from "astro-icon/components";
         background-color: transparent;
         color: black;
     }
+
+    @media (max-width: 30rem) {
+        header {
+            top: var(--spacing-3);
+            margin-top: var(--spacing-3);
+            padding: var(--spacing-2) var(--spacing-3);
+        }
+
+        #site-nav a {
+            min-height: 2.75rem;
+        }
+
+        #site-nav-home {
+            padding-block: 0;
+        }
+    }
 </style>
