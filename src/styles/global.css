@@ -19,6 +19,11 @@
     --spacing-2: 8px;
     --spacing-3: 16px;
     --spacing-4: 24px;
+    --spacing-5: 32px;
+    --spacing-6: 48px;
+    --spacing-7: 64px;
+    --spacing-8: 96px;
+    --spacing-9: 128px;
 
     --blur: saturate(1.8) blur(0.75rem);
     --edge-highlight: inset 0 0.0625rem 0 rgb(255 255 255 / 0.1);
