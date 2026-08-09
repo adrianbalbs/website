@@ -17,5 +17,14 @@ export default defineConfig({
   }],
 
   integrations: [icon()],
-  adapter: cloudflare()
+  adapter: cloudflare(),
+
+  vite: {
+    optimizeDeps: {
+      // astro-icon pulls in @iconify/utils, whose dependency chain is CJS.
+      // Without pre-bundling it, the workerd dev runner throws
+      // "module is not defined" on every page that renders an <Icon />.
+      include: ['astro-icon > @iconify/utils'],
+    },
+  }
 });
