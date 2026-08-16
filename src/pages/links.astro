@@ -58,9 +58,10 @@ import Layout from "../layouts/Layout.astro";
         border-radius: var(--radius-3);
         cursor: pointer;
         transition:
-            transform 0.4s,
-            border 0.4s,
-            color 0.4s;
+            box-shadow var(--transition-duration),
+            transform var(--transition-duration),
+            border var(--transition-duration),
+            color var(--transition-duration);
         border: 1px solid var(--gray-5);
     }
 
@@ -71,7 +72,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .link-icon {
-        transition: color 0.4s;
+        transition: color var(--transition-duration);
     }
 
     .link-button:hover .link-icon {
