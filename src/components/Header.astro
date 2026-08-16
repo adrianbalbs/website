@@ -7,7 +7,7 @@ import { Icon } from "astro-icon/components";
         <ul>
             <li id="site-nav-home">
                 <a href="/">
-                    <Icon name="lucide:house" />
+                    <Icon name="ph:house-fill" />
                     Adrian Balbalosa</a
                 >
             </li>
@@ -27,9 +27,8 @@ import { Icon } from "astro-icon/components";
         position: sticky;
         top: var(--spacing-4);
         z-index: 999;
-        border-radius: 2.25rem;
+        border-radius: var(--radius-6);
         margin-top: var(--spacing-4);
-        background-color: var(--gray);
         backdrop-filter: var(--blur);
         box-shadow: var(--edge-highlight), var(--shadow-glass);
         padding: var(--spacing-3) var(--spacing-4);
@@ -48,7 +47,7 @@ import { Icon } from "astro-icon/components";
         display: inline-flex;
         align-items: center;
         gap: var(--spacing-1);
-        border-radius: 2.25rem;
+        border-radius: var(--radius-6);
         color: var(--fg-muted);
         text-decoration: none;
         padding: var(--spacing-1) var(--spacing-2);
@@ -59,7 +58,7 @@ import { Icon } from "astro-icon/components";
     }
 
     #site-nav li:not(#site-nav-home) a:hover {
-        background-color: var(--gray-accent);
+        background-color: var(--surface);
         box-shadow: var(--edge-highlight), var(--shadow-glass);
         color: var(--fg);
     }
@@ -72,8 +71,8 @@ import { Icon } from "astro-icon/components";
     }
 
     #site-nav-home {
-        border-radius: 2.25rem;
-        background-color: var(--gray-accent);
+        border-radius: var(--radius-6);
+        background-color: var(--surface);
         box-shadow: var(--edge-highlight), var(--shadow-glass);
         padding: var(--spacing-1) var(--spacing-2);
         transition: background-color 150ms ease;

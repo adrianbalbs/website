@@ -1,5 +1,6 @@
 :root {
     --accent: hsl(265 74.3% 73.3%);
+    --accent-muted: hsl(265 10.0% 50.0%);
 
     --gray-1: hsl(0 0% 10%);
     --gray-2: hsl(0 0% 13%);
@@ -33,6 +34,14 @@
     --spacing-7: 64px;
     --spacing-8: 96px;
     --spacing-9: 128px;
+
+    --radius-1: 4px;
+    --radius-2: 8px;
+    --radius-3: 12px;
+    --radius-4: 16px;
+    --radius-5: 24px;
+    --radius-6: 36px;
+    --radius-full: 9999px;
 
     --content-width: 43.75rem;
 

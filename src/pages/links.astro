@@ -1,40 +1,80 @@
 ---
+import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Links">
-    <h1>Under Construction</h1>
-    <p>Coming soon!</p>
+    <h3>Adrian Balbalosa</h3>
+    <p>Software Engineer</p>
+    <div class="links-container">
+        <a class="link-button" href="https://github.com/adrianbalbs">
+            <Icon name="ph:github-logo-fill" class="link-icon" />
+            Github
+        </a>
+        <a class="link-button" href="https://linkedin.com/in/adrianbalbs">
+            <Icon name="ph:linkedin-logo-fill" class="link-icon" />
+            LinkedIn
+        </a>
+        <a
+            class="link-button"
+            href="https://www.instagram.com/adrian.balbalosa_/"
+        >
+            <Icon name="ph:instagram-logo-fill" class="link-icon" />
+            Instagram
+        </a>
+    </div>
 </Layout>
 
 <style>
+    h3 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    p {
+        text-align: center;
+        color: var(--gray-7);
+        margin-top: 0;
+    }
+
     .links-container {
         display: flex;
+        gap: var(--spacing-3);
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
     .link-button {
-        flex: 1;
-        max-width: 300px;
+        width: 100%;
+        max-width: 350px;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         gap: var(--spacing-1);
         padding: var(--spacing-2) var(--spacing-3);
-        background-color: var(--gray-3);
-        color: var(--fg);
+        background-color: color-mix(in hsl, var(--bg) 70%, var(--gray-3));
+        color: var(--gray-9);
         text-decoration: none;
         border-radius: var(--radius-3);
         cursor: pointer;
         transition:
             transform 0.4s,
-            border 0.4s;
+            border 0.4s,
+            color 0.4s;
         border: 1px solid var(--gray-5);
     }
 
     .link-button:hover {
         transform: translateY(-4px);
-        border: 1px solid var(--gray-9);
+        border: 1px solid var(--accent-muted);
+        box-shadow: var(--shadow-glass);
+    }
+
+    .link-icon {
+        transition: color 0.4s;
+    }
+
+    .link-button:hover .link-icon {
+        color: var(--accent-muted);
     }
 </style>

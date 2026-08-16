@@ -11,8 +11,6 @@ const { title } = Astro.props;
 
 const siteName = "Adrian Balbalosa";
 const pageTitle = title ? `${title} - ${siteName}` : siteName;
-
-const contentWidth = "700px";
 ---
 
 <!doctype html>
@@ -40,7 +38,7 @@ const contentWidth = "700px";
     </body>
 </html>
 
-<style define:vars={{ contentWidth }}>
+<style>
     #container {
         display: flex;
         flex-direction: column;
@@ -50,7 +48,7 @@ const contentWidth = "700px";
 
     main {
         width: 100%;
-        max-width: var(--contentWidth);
+        max-width: var(--content-width);
         margin-block: var(--spacing-7);
     }
 
@@ -60,7 +58,7 @@ const contentWidth = "700px";
         align-items: center;
         gap: var(--spacing-1);
         width: 100%;
-        max-width: var(--contentWidth);
+        max-width: var(--content-width);
         margin-block: var(--spacing-4);
         color: var(--fg-muted);
     }
